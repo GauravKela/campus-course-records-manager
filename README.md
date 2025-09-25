@@ -1,112 +1,69 @@
-# 🎓 Campus Course & Records Manager (CCRM)
+Campus Course & Records Manager (CCRM)
+Project Overview
 
-## Overview
-A comprehensive Java application for managing student records, courses, and enrollments in an educational institution. Built using advanced Object-Oriented Programming concepts and modern Java features.
+The Campus Course & Records Manager (CCRM) is a console-based Java SE application for educational institutions to manage:
 
-## Features
-- **Student Management**: Add, view, search, and manage student records
-- **Course Management**: Create and manage courses with Builder pattern
-- **Enrollment System**: Handle student-course enrollments with validation
-- **Grade Management**: Assign grades and generate transcripts
-- **File I/O Operations**: Import/export data using NIO.2 APIs
-- **Advanced Reporting**: Statistics and analytics with Stream API
-- **Utility Functions**: Recursion demonstrations and sorting algorithms
+Students → Create, update, list, deactivate, enroll/unenroll in courses.
 
-## Technical Highlights
-### Object-Oriented Programming
-- **Inheritance**: Person → Student, Person → Instructor
-- **Polymorphism**: Method overriding and overloading
-- **Encapsulation**: Private fields with proper accessors
-- **Abstraction**: Abstract classes and interfaces
+Courses → Create, update, list, deactivate, search/filter, assign instructors.
 
-### Design Patterns
-- **Singleton Pattern**: Configuration management
-- **Builder Pattern**: Course creation
-- **Service Layer Pattern**: Business logic separation
+Enrollments & Grading → Enroll students in courses, record marks, calculate GPA, generate transcripts.
 
-### Advanced Java Features
-- **Enums with Methods**: Grade system with GPA calculation
-- **Lambda Expressions**: Functional programming in Comparators
-- **Stream API**: Data processing and filtering
-- **NIO.2 File Operations**: Modern file I/O
-- **LocalDateTime API**: Date/time handling
-- **Exception Handling**: Custom exceptions with detailed information
+File Operations → Import/export data to CSV/text files and perform timestamped backups.
 
-## Project Structure
-src/
-├── edu/ccrm/
-│ ├── Main.java # Application entry point
-│ ├── cli/ # Command Line Interface
-│ │ └── CLIManager.java
-│ ├── config/ # Configuration management
-│ │ └── AppConfig.java
-│ ├── domain/ # Domain entities
-│ │ ├── Person.java # Abstract base class
-│ │ ├── Student.java # Student entity
-│ │ ├── Course.java # Course entity (Builder pattern)
-│ │ ├── Enrollment.java # Association class
-│ │ └── [other domain classes]
-│ ├── service/ # Business logic layer
-│ │ ├── StudentService.java
-│ │ ├── CourseService.java
-│ │ └── EnrollmentService.java
-│ ├── exceptions/ # Custom exceptions
-│ ├── io/ # File I/O operations
-│ └── util/ # Utility classes
+Reports → Generate GPA distribution, top performers, etc., using Streams API.
 
+This project demonstrates:
 
-## How to Run
-### Prerequisites
-- Java 11 or higher
-- Command line or IDE (VS Code, IntelliJ IDEA, Eclipse)
+Core Java concepts: OOP, Enums, Interfaces, Nested Classes, Streams API, Date/Time API, Exception Handling.
 
-### Compilation & Execution
-```bash
-# Navigate to project directory
-cd CampusCourseRecordsManager/src
+Design Patterns: Singleton, Builder.
 
-# Compile
-javac edu/ccrm/Main.java
+Modern Java Features: NIO.2, Lambdas, and recursion.
 
-# Run
-java edu.ccrm.Main
-Using VS Code
-Open the project folder in VS Code
+Project Structure
+CampusCourseRecordsManager
+│   README.md
+│
+├───bin/                # Compiled output files
+│   ├───edu/ccrm/...    # .class files for all packages
+│   ├───exports/        # Exported CSV files
+│   └───backups/        # Backup folders
+│
+├───lib/                # External libraries (if needed)
+│
+└───src/                # Source code
+    │   App.java
+    │
+    ├───edu/ccrm/
+    │   ├───cli/        # CLIManager, Main.java
+    │   ├───config/     # AppConfig (Singleton)
+    │   ├───domain/     # Person, Student, Course, Enrollment, etc.
+    │   ├───exceptions/ # Custom exceptions
+    │   ├───io/         # Import/Export and backup services
+    │   ├───service/    # StudentService, CourseService, EnrollmentService
+    │   └───util/       # Validators, Recursion utilities
+    │
+    ├───exports/        # CSV export folder
+    └───imports/        # CSV import folder
 
-Navigate to src/edu/ccrm/Main.java
+How to Run
+Requirements
 
-Click the ▶️ Run button
+Java JDK 24 or above
+Check installation:
+java -version
+javac -version
+VS Code with Java Extension Pack installed.
 
-Sample Usage
-The application comes with pre-loaded sample data:
+Git for version control.
+Compile the Project
 
-3 students with different departments and GPAs
+Open VS Code terminal, navigate to project root:
+cd "C:\Gaurav\Study\Coding\Coding Material\JAVA_PROJECT_VITYYARTHI\CampusCourseRecordsManager"
+Compile source files into the bin folder:
+javac -d bin -sourcepath src src\edu\ccrm\cli\Main.java src\edu\ccrm\**\*.java
 
-2 courses from different departments
+Run the Project
+java -cp bin edu.ccrm.cli.Main
 
-Interactive menu system for all operations
-
-Academic Concepts Demonstrated
-Recursion: Factorial, Fibonacci, Binary Search
-
-Collections: Lists, Sets, Maps with generic types
-
-File Operations: CSV import/export, JSON-like format
-
-Data Validation: Input validation with regex patterns
-
-Sorting Algorithms: Multiple sorting criteria with Comparators
-
-Statistical Analysis: GPA calculations, distribution analysis
-
-Development
-Language: Java 11+
-
-Architecture: Layered architecture with separation of concerns
-
-Testing: Manual testing through CLI interface
-
-Documentation: Comprehensive JavaDoc comments
-
-Author
-Developed as an advanced Java programming project demonstrating enterprise-level coding practices and design patterns.

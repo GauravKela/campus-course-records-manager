@@ -1,69 +1,92 @@
-Campus Course & Records Manager (CCRM)
-Project Overview
+# Campus Course & Records Manager (CCRM)
 
-The Campus Course & Records Manager (CCRM) is a console-based Java SE application for educational institutions to manage:
+## Overview
 
-Students → Create, update, list, deactivate, enroll/unenroll in courses.
+Campus Course & Records Manager (CCRM) is a Java console-based application designed for educational institutions to manage student data, courses, enrollments, and grading.
 
-Courses → Create, update, list, deactivate, search/filter, assign instructors.
+It demonstrates advanced Java concepts such as Object-Oriented Programming (OOP), design patterns, use of modern Java features (Streams, Lambda Expressions, NIO.2), and effective software design best practices.
 
-Enrollments & Grading → Enroll students in courses, record marks, calculate GPA, generate transcripts.
+---
 
-File Operations → Import/export data to CSV/text files and perform timestamped backups.
+## Features
 
-Reports → Generate GPA distribution, top performers, etc., using Streams API.
+- **Student Management:** Create, update, list, and manage students with validation and status handling.
+- **Course Management:** Build and administer courses with flexible criteria and instructor assignments.
+- **Enrollment & Grading:** Enroll students, record grades, calculate GPA, and generate transcripts.
+- **File I/O:** Import/export CSV and JSON data; backup and restore data with timestamps.
+- **Reporting:** Generate statistics such as GPA distributions and top-performing students.
+- **Utility Modules:** Showcases algorithms using recursion, sorting, and validation utilities.
 
-This project demonstrates:
+---
 
-Core Java concepts: OOP, Enums, Interfaces, Nested Classes, Streams API, Date/Time API, Exception Handling.
+## Technical Details
 
-Design Patterns: Singleton, Builder.
+- **Core Java:** Classes, Enums, Interfaces, Nested Classes, Collections, Streams API.
+- **Design Patterns:** Singleton (Config management), Builder (Course creation), Service Layer.
+- **Exception Handling:** Custom exceptions provide robust error management.
+- **Modern Features:** Lamdas, functional interfaces, NIO.2 API for file operations.
+- **Unit Tests:** (Optional) Test core classes and logic with JUnit or similar.
 
-Modern Java Features: NIO.2, Lambdas, and recursion.
+---
 
-Project Structure
-CampusCourseRecordsManager
-│   README.md
-│
-├───bin/                # Compiled output files
-│   ├───edu/ccrm/...    # .class files for all packages
-│   ├───exports/        # Exported CSV files
-│   └───backups/        # Backup folders
-│
-├───lib/                # External libraries (if needed)
-│
-└───src/                # Source code
-    │   App.java
-    │
-    ├───edu/ccrm/
-    │   ├───cli/        # CLIManager, Main.java
-    │   ├───config/     # AppConfig (Singleton)
-    │   ├───domain/     # Person, Student, Course, Enrollment, etc.
-    │   ├───exceptions/ # Custom exceptions
-    │   ├───io/         # Import/Export and backup services
-    │   ├───service/    # StudentService, CourseService, EnrollmentService
-    │   └───util/       # Validators, Recursion utilities
-    │
-    ├───exports/        # CSV export folder
-    └───imports/        # CSV import folder
+## Project Structure
 
-How to Run
-Requirements
+CampusCourseRecordsManager/
+├── src/
+│ └── edu/
+│ └── ccrm/
+│ ├── Main.java # Application entry point
+│ ├── cli/ # CLI interface files
+│ ├── config/ # Configuration classes (Singleton)
+│ ├── domain/ # Java Beans & Domain Entities
+│ ├── exceptions/ # Custom exceptions
+│ ├── io/ # Import/Export and Backup services
+│ ├── service/ # Business logic and services
+│ └── util/ # Utility and helper classes
+├── README.md
 
-Java JDK 24 or above
-Check installation:
-java -version
-javac -version
-VS Code with Java Extension Pack installed.
 
-Git for version control.
-Compile the Project
+---
 
-Open VS Code terminal, navigate to project root:
-cd "C:\Gaurav\Study\Coding\Coding Material\JAVA_PROJECT_VITYYARTHI\CampusCourseRecordsManager"
-Compile source files into the bin folder:
-javac -d bin -sourcepath src src\edu\ccrm\cli\Main.java src\edu\ccrm\**\*.java
+## Requirements
 
-Run the Project
-java -cp bin edu.ccrm.cli.Main
+- Java JDK 11 or higher
+- Git for version control
+- IDE (VS Code, IntelliJ IDEA, Eclipse) or command line
 
+---
+
+## Usage
+
+1. **Compile:**
+    ```
+    cd src
+    javac edu/ccrm/Main.java
+    ```
+
+2. **Run:**
+    ```
+    java edu.ccrm.Main
+    ```
+
+3. Alternatively, use IDE run configurations to compile and run the `Main` class.
+
+---
+
+## Getting Started with VS Code
+
+- Open the project folder.
+- Navigate to `src/edu/ccrm/Main.java`.
+- Use the VS Code "Run" button or the integrated terminal to build and run.
+
+---
+
+## Author
+
+**Gaurav Kela**
+
+- GitHub: [https://github.com/GauravKela](https://github.com/GauravKela)
+
+---
+
+⭐ Star the repository if you find it useful!
